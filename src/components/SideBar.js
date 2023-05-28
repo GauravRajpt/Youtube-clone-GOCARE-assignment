@@ -7,19 +7,24 @@ import { ReactComponent as Hisory } from "../Images/History.svg";
 import { ReactComponent as YourVideo } from "../Images/Yourvideo.svg";
 import { ReactComponent as WatchLater } from "../Images/watchlater.svg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function SideBar() {
   const ismenu = useSelector((state) => state.menu);
 
   if (ismenu) {
     return (
-      <div className=" font-sans   fixed left-0 h-full bg-white z-10 ">
+      <div className=" font-sans   fixed left-0 h-full bg-white z-10 "><Link to="/">
         <div className="pl-4 hover:bg-gray-200 cursor-pointer flex flex-row py-2 w-[200px] rounded-lg  bg-gray-100 font-[600]">
-          <div>
-            <Home />
-          </div>{" "}
+          
+            {" "}
+            <div>
+              <Home />
+            </div>
+           
           <li className="list-none mx-4 text-sm">Home</li>{" "}
         </div>
+        </Link>
         <div className="pl-4 hover:bg-gray-100 cursor-pointer flex flex-row py-2 rounded-lg ">
           <div>
             {/*icon */}
@@ -27,16 +32,15 @@ function SideBar() {
           </div>{" "}
           <li className="list-none mx-4 text-sm">Shorts</li>{" "}
         </div>
-        
-          <div className="pl-4 hover:bg-gray-100 cursor-pointer flex flex-row py-2 rounded-lg  ">
-            <div>
-              {/*icon */}
-              <Subscription />
-            </div>{" "}
-            <li className="list-none mx-4 text-sm">Subscription</li>{" "}
-          </div>
-          <div className="border-b m-4">
+
+        <div className="pl-4 hover:bg-gray-100 cursor-pointer flex flex-row py-2 rounded-lg  ">
+          <div>
+            {/*icon */}
+            <Subscription />
+          </div>{" "}
+          <li className="list-none mx-4 text-sm">Subscription</li>{" "}
         </div>
+        <div className="border-b m-4"></div>
         <div className="pl-4 hover:bg-gray-100 cursor-pointer flex flex-row py-2 rounded-lg ">
           <div>
             {/*icon */}

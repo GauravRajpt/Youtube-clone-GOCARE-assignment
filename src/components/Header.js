@@ -6,6 +6,7 @@ import {ReactComponent as Create} from "../Images/Create.svg"
 import profile from "../Images/profile.jpg"
 import { menutoggle } from '../Store/menuSlice'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function Header() {
   const dispatch= useDispatch();
@@ -21,7 +22,7 @@ function Header() {
          <div className='w-[24px] h-[24px] cursor-pointer'
          onClick={()=>handleclick()}
          ><Threedot/></div>
-        <div className='w-42 h-6 ml-4 cursor-pointer'> <Youtube/></div>
+       <Link to="/"> <div className='w-42 h-6 ml-4 cursor-pointer'> <Youtube/></div></Link>
        
       </div>
       <div>
